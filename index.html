@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resumanator</title>
+	<link rel="shortcut icon" href="favicon_CV.jpg" type="image/x-icon" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Griffy" rel="stylesheet">
+    <link href="assets/css/gsdk-base.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+
+    <style type="text/css">
+    	body {
+    		background-image: url("backg.jpg");
+    		background-size: cover;
+			background-position: center;
+			opacity: 0.5;
+    	}
+
+    	html {
+    		height: 100%;
+    	}
+
+    	.content {
+    		border: 0.5px solid black;
+    		font-family: Amatic SC;
+    		border-radius: 10%;
+    		width: 75%;
+    		height: 42em;
+    		background-color: #D3D3D3;
+    		margin-top: 5%;
+    		box-shadow: 10px 10px 5px #000;
+    	}
+
+    	.content h2 {
+    		font-size: 35px;
+    		font-family: Amatic SC;
+    		letter-spacing: 1px;
+    		font-weight: 700;
+    		color: black;
+    		margin-left: 5%;
+    	}
+
+    	.content h3 {
+    		font-size: 20px;
+    		font-weight: 700;
+    		margin-left: 5%;
+    		letter-spacing: 2px;
+    		color: black;
+    	}
+
+    	.content input {
+    		background-color: #000;
+    		width: 90%;
+    		margin-left: 5%;
+    	}
+
+    	.content textarea {
+    		background-color: black;
+    		width: 90%;
+    		margin-left: 5%;
+    	}
+
+    	input[type=text] {
+    		color: #000;
+    		letter-spacing: 1px;
+    		font-weight: 700;
+    		font-size: 15px;
+    	}
+
+    	input[type=email] {
+    		color: #000;
+    		letter-spacing: 1px;
+    		font-weight: 700;
+    		font-size: 15px;
+    	}
+
+    	textarea[type=text] {
+    		color: #000;
+    		letter-spacing: 1px;
+    		font-weight: 700;
+    		font-size: 15px;
+    	}
+
+    	.btn.btn-default:hover {
+    		background-color: #4169e1;
+    	}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#000000;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html" style="color:#ffffff;font-family:Griffy;"><i class="fa fa-certificate" aria-hidden="true"></i> Resumanator</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="serenade_about.html"  style="color:#ffffff;font-family: Amatic SC;font-size:20px;font-weight: 700;">About</a></li>
+        <li><a href="serenade_contacts.html"  style="color:#ffffff;font-family: Amatic SC;font-size:20px;font-weight: 700;">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top:4em;">
+ 		  <div class="content">
+ 			 <h2>Create a free CV here!</h2>
+ 			 <hr style="width:90%;color:black;">
+ 			 <h3>FULL NAME</h3>
+ 			 <div class="form-group">
+ 			 	<input type="text" class="form-control" placeholder="Enter you full name...">
+ 			 </div>
+ 			 <h3>E-MAIL ADDRESS</h3>
+ 			 <div class="form-group">
+ 			 	<input type="email" class="form-control" placeholder="Enter your email...">
+ 			 </div>
+ 			 <h3>MOBILE NO.</h3>
+ 			 <div class="form-group">
+ 			 	<input type="text" class="form-control" placeholder="Your mobile Number...">
+ 			 </div>
+ 			 <h3>QUALIFICATIONS</h3>
+ 			 <div class="form-group">
+ 			 	<textarea type="text" class="form-control" row = "3" placeholder="Add your Qualifications..."></textarea>
+ 			 </div>
+ 			<hr style="width:90%;color:black;">
+ 		  <form method="get" action="more_info.html"> 
+ 		  	<button type="submit" class="btn btn-default" style="margin-left:5%;font-family:Griffy;font-size:20px;border:1px solid black;color:black;background-color:#00bfff;font-weight:700;">Resumanate !</button>
+ 		  </form>
+ 		  </div>
+ 		  </div>
+ 		</div>
+ 	</div>
+ </div>
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
