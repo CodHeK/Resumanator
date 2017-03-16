@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="">
 <head>
 	<title>Resumanator</title>
 	<link rel="shortcut icon" href="favicon_CV.jpg" type="image/x-icon" />
@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Griffy" rel="stylesheet">
     <link href="assets/css/gsdk-base.css" rel="stylesheet" />
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <style type="text/css">
-    	body {
+    	@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300");
+    	.container.full {
     		background-image: url("backg.jpg");
     		background-size: cover;
 			background-position: center;
@@ -32,6 +33,17 @@
     		margin-top: 5%;
     		box-shadow: 10px 10px 5px #000;
     	}
+
+    	.Desp {
+    		border: 0px;  
+    		box-shadow: 10px 10px 5px #000; 
+    		margin-top: 5%;
+    		background-color: #fff;
+    		width: 70%;
+    		height: 50%;
+    		margin-left: 20%; 
+    		text-align: center
+       	}
 
     	.content h2 {
     		font-size: 35px;
@@ -86,6 +98,21 @@
     	.btn.btn-default:hover {
     		background-color: #4169e1;
     	}
+		#resume {
+			font: 300 50px/1 Alegreya Sans, monospace;
+            background-color: white;
+		}
+
+		hr {
+			width: 100%;
+			color: black;
+		}
+
+		h2 {
+			text-align: center;
+			font-weight: 600;
+			color: black;
+		}
     </style>
 </head>
 <body>
@@ -98,7 +125,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html" style="color:#ffffff;font-family:Griffy;"><i class="fa fa-certificate" aria-hidden="true"></i> Resumanator</a>
+      <a class="navbar-brand" href="index.html" style="color:#ffffff;font-family:Griffy;"><i class="fa fa-certificate" aria-hidden="true"></i> Resumanator <sub><b style="font-size:15px;font-family:Amatic SC;color:white;letter-spacing:1.5px">(make your 2 minute free C.V)</b></sub></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -111,6 +138,7 @@
     </div>
   </div>
  </nav>
+ <div id="edit">
  <div class="container">
  	<div class="row">
  		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top:4em;">
@@ -120,29 +148,60 @@
  			 <form action="resume.php" method="post">
  			 <h3>FULL NAME</h3>
  			 <div class="form-group">
- 			 	<input type="text" class="form-control" placeholder="Enter you full name..." name="fullname">
+ 			 	<input type="text" ng-model="name" class="form-control" placeholder="Enter you full name...">
  			 </div>
  			 <h3>E-MAIL ADDRESS</h3>
  			 <div class="form-group">
- 			 	<input type="email" class="form-control" placeholder="Enter your email..." name="email">
+ 			 	<input type="email" ng-model="email" class="form-control" placeholder="Enter your email...">
  			 </div>
  			 <h3>MOBILE NO.</h3>
  			 <div class="form-group">
- 			 	<input type="text" class="form-control" placeholder="Your mobile Number..." name="mobile">
+ 			 	<input type="text" ng-model="mobile" class="form-control" placeholder="Your mobile Number...">
  			 </div>
  			 <h3>QUALIFICATIONS</h3>
  			 <div class="form-group">
- 			 	<textarea type="text" class="form-control" row = "3" placeholder="Add your Qualifications..." name = "qua"></textarea>
+ 			 	<textarea type="text" ng-model="qua" class="form-control" row = "3" placeholder="Add your Qualifications..." ></textarea>
  			 </div>
  			 <!-- </form> -->
  			<hr style="width:90%;color:black;">
- 		  <!-- <form method="get" action="resume.php">  -->
- 		  	<button type="submit" class="btn btn-default" style="margin-left:5%;font-family:Griffy;font-size:20px;border:1px solid black;color:black;background-color:#00bfff;font-weight:700;">Resumanate !</button>
+ 		  <form method="get"> 
+ 		  	<button type="submit" class="btn btn-default" style="margin-left:5%;font-family:Griffy;font-size:20px;border:1px solid black;color:black;background-color:#000;font-weight:700;"><a href="#resume" style="text-decoration: none;">Resumanate !</a></button>
  		  </form>
+          </form>
  		  </div>
  		  </div>
  		</div>
  	</div>
+ </div>
+ </div>
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <div id="resume">
+ 	<div class="container">
+		<div class="header">
+			<h2>C.V / Resume</h2>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-lg-9">
+				<h3 style="font-size: 40px;font-weight: 600;">Introduction: </h3>
+				<br>
+				 <h3><b>NAME:</b></h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ name }} <br><br>
+				 <h3><b>MOBILE NUMBER:</b></h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ mobile }}<br><br>
+				 <h3><b>EMAIL ID:</b></h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ email }}<br><br>
+				<hr>
+				<br>
+				<h3 style="font-size: 40px;font-weight: 600;">Qualifiations: </h3>
+				
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ qua }}<br>
+				<hr><br>
+				<br>
+				<hr>
+		</div>
+		<form method="get"> 
+            <button type="submit" class="btn btn-default" style="margin-left:5%;font-size:20px;border:1px solid black;color:black;background-color:#000;font-weight:700;"><a href="#edit" style="text-decoration:inherit;">EDIT INFO</a></button>
+          </form>
+	</div>
  </div>
 </body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
